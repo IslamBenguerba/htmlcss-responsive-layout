@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+/* inizio header */
+body{
+    font-family: 'Roboto',sans-serif;
+}
+header{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: .5rem;
+    padding-left: 0.5rem;
+    width: 100%;
+    background-color: #0084fd;
+}
+nav{
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffff;
+}
+nav  .icone{
+    color: #ffff;
+    
+}
+.nav-menu{
+    list-style-type: none;
+    display: none;
+}
+.nav-menu a{
+    text-decoration: none;
+    padding: 15px 10px 15px 10px;
+}
+.nav-menu a:hover{
+    background-color: rgb(219, 231, 231);
+}
+.nav-btn{
+    display: none;
+    border: 0;
+    border-radius: 10px;
+    padding: 4px;
+    padding-bottom: 2px;
+    background-color: #ffff;
+}
+/* inizio main */
+section{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.colored{
+    background-color: #9792e4;
+}
+.container{
+    width: 100%;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+/* contenitore per usare le colonne e non il container principale */
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black
+}
+.col{
+    flex-grow: 1;
+    flex-basis: 100%;
+    border:  2px solid green;
+}
+
+
+/* @media screen and (min-width: 576px){
+    .container-m{
+        max-width: 500px;
+    }
+    .col-m{
+        flex-basis: 65%;
+        border: 2px solid yellow;
+    }
+    .col-sm{
+        flex-basis: calc(100% / 3);
+        border: 2px solid blue;
+        }
+} */
+@media screen and (min-width: 768px){
+    .container{
+        border: 2px solid #0084fd;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        max-width: 600px;
+    }
+    .col-sm{
+        flex-basis: calc(100% / 3);
+        border: 2px solid blue;
+        }
+    .col-2-3{
+    flex-basis: calc((100% / 3) * 2);
+    border: 2px solid red;
+    }
+    .col-media{
+        flex-basis: 50%;
+    }
+
+}   
+@media screen and (min-width: 992px){
+    .nav-menu{
+        display: flex;
+    }
+    nav .icone{
+        display: none ;
+    }
+    .container{
+        border:2px dashed #9792e4;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        max-width: 920px;
+    }
+    .col-sm{
+        flex-basis: calc(100% / 3);
+        border: 2px solid blue;
+    }
+    .container-About-us{
+        border: 2px solid blue;
+        max-width: 760px;
+    }
+}
