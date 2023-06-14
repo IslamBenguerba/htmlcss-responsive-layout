@@ -55,6 +55,13 @@ nav .row{
     padding-bottom: 2px;
     background-color: #ffff;
 }
+
+.icona:focus ~.row{
+    display: block;
+}
+.icona:focus ~.row>.nav-menu{
+    display: flex;
+}
 /* inizio main */
 section{
     padding-top: 40px;
@@ -302,26 +309,35 @@ section{
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
-.card-abouts-immg{
+.card-abouts-immg{ 
     display: flex;
-    position: relative;
     row-gap: 2rem;
     flex-direction: column;
     align-items: flex-start;
     padding-left: 25%;
     padding-right: 25%;
 }
-.card-abouts-immg img{ 
+.card-about-back{
+    position: relative;
+    background-image: url(/img/about.jpg);
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+/* .card-abouts-immg img{ 
+    position: relative;
     align-self: flex-start;
     height: 135px;
     border-radius: 50%;
-}
+} */
+
 .card-abouts-immg .virgolette{
     font-size: 3rem;
     color: var(--color-second-primary);
     position: absolute;
-    top: -10px;
-    right: 235px;
+    top: 0px;
+    right: 0px;
 }
 
 /* inizio ultima sezione */
@@ -376,7 +392,7 @@ section{
         flex-basis: calc((100% / 3) - 15px);
     }
     .card-abouts-immg .virgolette{
-        right: 110px;
+        /* right: 110px; */
     }
     .col-flexed{
         flex-direction: row;
