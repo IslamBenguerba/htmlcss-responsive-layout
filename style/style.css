@@ -58,7 +58,7 @@ section{
 .container{
     width: 100%;
     margin: 0 auto;
-    max-width: 400px;
+    max-width: 500px;
 }
 
 /* contenitore per usare le colonne e non il container principale */
@@ -98,6 +98,9 @@ section{
 .immagine{
     height: 300px;
 }
+.img-plan{
+    height: 400px;
+}
 .icone{
     font-size: 4rem;
 }
@@ -105,10 +108,9 @@ section{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding-left: 4rem;
+    padding-left: 1rem;
     padding-right: 1rem;
     height: 100%;
-    width: min-content;
     background-color: #b5ddff;
     
 }
@@ -133,6 +135,44 @@ section{
     border: 0;
     border-radius: 25px;
 }
+.planning{
+    background-color: #9792e4;
+    align-items: flex-start;
+    row-gap: 2rem;
+    color: white;
+}
+.planning h2{
+    padding-top: 1rem;
+}
+.planning-2{
+    background-color: white;
+    padding-bottom: 1.5rem;
+    border-radius: 30px;
+}
+.planning-2 button{
+    background-color: #9792e4;
+    border: 0;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+}
+.testimonials{
+    background-color: #9792e4;
+    flex-direction: row;
+}
+.container-card img{
+    width: auto;
+    height: 100%;
+    margin-left: -80px;
+    border-radius: 50%;
+}
+.container-card{
+    border: 1px solid;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+}
 /* @media screen and (min-width: 576px){
     .container-m{
         max-width: 500px;
@@ -149,6 +189,90 @@ section{
 .container> .row{
     gap: 10px;
 }
+.testimonial{
+    background-color: white;
+    border-radius: 0;
+    gap: 1rem;
+}
+.testimonial h2{
+    color: #9792e4;
+    
+}
+.col-testimonial{
+    flex-basis: calc((100% / 3));
+}
+
+.row.row-benefit{
+    flex-wrap: wrap;
+    column-gap: 16px;
+    
+}
+/* .row.row-benefit .col-sm{
+    padding-left: 15px;
+} */
+.card-benefit h3{
+    font-size: 3rem;
+}
+.card-benefit h4{
+    font-size: 1.5rem;
+}
+.card-benefit h3,h4{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    color: #9792e4;
+}
+.btn-viola{
+    background-color: #9792e4;
+    color: white;
+    border: 0;
+    border-radius: 15px;
+}
+.card-benefit{
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+    padding-left: 1.5rem;
+    background-color: white;
+    border-radius: 25px;
+}
+.card-benefit p{
+    padding-top: 0.7rem;
+    padding-bottom: 2.5rem;
+}
+.card-benefit .btn-viola{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+}
+.colored-2{
+    background-color: #9792e4;
+}
+/* Sezione About Us */
+.container-About-us >.row{
+    gap: 40px;
+}
+.card-aubout-us h2{
+    font-size: 3rem;
+    color: #9792e4;
+}
+.card-aubout-us p{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.card-abouts-immg{
+    display: flex;
+    row-gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+.card-abouts-immg img{ 
+    align-self: flex-start;
+    height: 100px;
+    border-radius: 50%;
+}
+/* About us testimonials con immagine */
 
 @media screen and (min-width: 768px){
     .container{
@@ -158,15 +282,26 @@ section{
         max-width: 720px;
     }
     .col-sm{
-        flex-basis: calc(100% / 3);
+        flex-basis: calc((100% / 3) - 10px);
         border: 2px solid blue;
         }
+    .row.row-benefit .col-sm{
+        flex-basis: calc(((100% / 2) - 50px));
+        flex-grow: 1;
+        border:  2px solid #b5ddff;
+    }
     .col-2-3{
-    flex-basis: calc((100% / 3) * 2);
-    border: 2px solid red;
+        flex-basis: calc(((100% / 3) * 2) - 10px);
+        border: 2px solid red;
     }
     .col-media{
         flex-basis: 50%;
+    }
+    .first{
+        border-radius: 0;
+    }
+    .container-About-us .col-media{
+        flex-basis: calc((100% / 3) - 15px);
     }
 
 }   
@@ -190,7 +325,7 @@ section{
         max-width: 950px;
     }
     .col-sm{
-        flex-basis: calc(100% / 3);
+        flex-basis: calc((100% / 3) - 10px);
         border: 2px solid blue;
     }
     .container-About-us{
@@ -199,5 +334,19 @@ section{
     }
     .first{
         flex-basis: 0;
+    }
+    .colored  .row{
+        flex-wrap: nowrap;
+    }
+    .planning p{
+        margin-bottom: -50%;
+    }
+    .planning-2-dekstop{
+        margin-top: 50%;
+    }
+    .row.row-benefit .col-sm{
+        flex-basis: calc(((100% / 3) - 50px));
+        flex-grow: 1;
+        border:  2px solid #b5ddff;
     }
 }
