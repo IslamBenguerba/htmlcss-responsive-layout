@@ -80,7 +80,7 @@ section{
 .row{
     display: flex;
     flex-wrap: wrap;
-    border: 1px solid black
+    /* border: 1px solid black */
 }
 .row-about{
     justify-content: center;
@@ -89,7 +89,7 @@ section{
 .col{
     flex-grow: 1;
     flex-basis: 100%;
-    border:  2px solid green;
+    /* border:  2px solid green; */
 }
 
 .nav-about{
@@ -120,8 +120,12 @@ section{
     font-size: 4rem;
     color: var(--color-first-primary);
 }
-.col-2-3 >.row{
-    border-radius: var(--dimensione-border-radius);
+
+.card{
+    border-radius: 20px 20px 0px 0px;
+}
+.card-small.first{
+    border-radius: 0px 0px 20px 20px;
 }
 .card{
     display: flex;
@@ -309,6 +313,7 @@ section{
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
+/* serve solo per avere il layout  */
 .card-abouts-immg{ 
     display: flex;
     row-gap: 2rem;
@@ -317,6 +322,7 @@ section{
     padding-left: 25%;
     padding-right: 25%;
 }
+/* div che ha come back-groung il tizio. */
 .card-about-back{
     position: relative;
     background-image: url(/img/about.jpg);
@@ -325,12 +331,6 @@ section{
     height: 150px;
     width: 150px;
 }
-/* .card-abouts-immg img{ 
-    position: relative;
-    align-self: flex-start;
-    height: 135px;
-    border-radius: 50%;
-} */
 
 .card-abouts-immg .virgolette{
     font-size: 3rem;
@@ -364,23 +364,24 @@ section{
 
 @media screen and (min-width: 768px){
     .container{
-        border: 2px solid #0084fd;
+        /* border: 2px solid #0084fd; */
         padding-left: 0.5rem;
         padding-right: 0.5rem;
         max-width: 720px;
     }
     .col-sm{
         flex-basis: calc((100% / 3) - 10px);
-        border: 2px solid blue;
+        /* border: 2px solid blue; */
         }
     .row.row-benefit .col-sm{
         flex-basis: calc(((100% / 2) - 50px));
         flex-grow: 1;
-        border:  2px solid #b5ddff;
+        /* border:  2px solid #b5ddff; */
     }
     .col-2-3{
         flex-basis: calc(((100% / 3) * 2) - 10px);
-        border: 2px solid red;
+        /* border: 2px solid red; */
+        
     }
     .col-media{
         flex-basis: 50%;
@@ -391,9 +392,7 @@ section{
     .container-About-us .col-media{
         flex-basis: calc((100% / 3) - 15px);
     }
-    .card-abouts-immg .virgolette{
-        /* right: 110px; */
-    }
+
     .col-flexed{
         flex-direction: row;
         justify-content: flex-start;
@@ -401,6 +400,7 @@ section{
     .testimonials{
         width: 100%;
         flex-direction: row;
+        padding-bottom: 2rem;
     }
 
 }   
@@ -428,14 +428,20 @@ section{
     }
     .col-sm{
         flex-basis: calc((100% / 3) - 10px);
-        border: 2px solid blue;
+        /* border: 2px solid blue; */
     }
     .container-About-us{
-        border: 2px solid blue;
+        /* border: 2px solid blue; */
         max-width: 760px;
     }
     .first{
         flex-basis: 0;
+    }
+    .card{
+        border-radius: 20px 0px 0px 20px;
+    }
+    .card-small.first{
+        border-radius: 0px 20px 20px 0px;
     }
     .colored  .row{
         flex-wrap: nowrap;
@@ -449,6 +455,6 @@ section{
     .row.row-benefit .col-sm{
         flex-basis: calc(((100% / 3) - 50px));
         flex-grow: 1;
-        border:  2px solid #b5ddff;
+        /* border:  2px solid #b5ddff; */
     }
 }
