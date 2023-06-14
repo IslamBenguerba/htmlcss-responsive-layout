@@ -1,3 +1,10 @@
+:root{
+    --color-first-primary: #0084fd;
+    --color-first-secondary:#b5ddff;
+    --color-second-primary: #9792e4;
+    --sizie-icona-3-bars: 2rem;
+    --dimensione-border-radius: 20px;
+}
 *{
     margin: 0;
     box-sizing: border-box;
@@ -12,7 +19,7 @@ header{
     padding-right: .5rem;
     padding-left: 0.5rem;
     width: 100%;
-    background-color: #0084fd;
+    background-color: var(--color-first-primary);
 }
 nav{
     display: flex;
@@ -21,7 +28,8 @@ nav{
     align-items: center;
     color: #ffff;
 }
-nav  .icone{
+nav  .icona{
+    font-size: var(--sizie-icona-3-bars);
     color: #ffff;
     
 }
@@ -53,7 +61,7 @@ section{
     padding-bottom: 40px;
 }
 .colored{
-    background-color: #9792e4;
+    background-color: var(--color-second-primary);
 }
 .container{
     width: 100%;
@@ -103,23 +111,29 @@ section{
 }
 .icone{
     font-size: 4rem;
+    color: var(--color-first-primary);
+}
+.col-2-3 >.row{
+    border-radius: var(--dimensione-border-radius);
 }
 .card{
     display: flex;
-    justify-content: center;
     flex-direction: column;
     padding-left: 1rem;
     padding-right: 1rem;
+    padding-top: 2rem;
     height: 100%;
-    background-color: #b5ddff;
+    background-color: var(--color-first-secondary);
     
 }
 .card-small{
     padding-top: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
-    background-color: #b5ddff;
-    border-radius: 20px;
+    padding-bottom: 2rem;
+    background-color: var(--color-first-secondary);
+    height: 100%;
+    border-radius: var(--dimensione-border-radius);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -129,14 +143,22 @@ section{
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
+.first{
+    border-radius: 0;
+}
 .button-card{
-    background-color: #0084fd;
+    background-color:var(--color-first-primary);
+    color: white;
     padding: 0.5rem 0.5rem 0.5rem 0.5rem;
     border: 0;
     border-radius: 25px;
+    width: 200px;
+}
+.button-card i{
+    padding-right: 0.5rem;
 }
 .planning{
-    background-color: #9792e4;
+    background-color: var(--color-second-primary);
     align-items: flex-start;
     row-gap: 2rem;
     color: white;
@@ -149,21 +171,30 @@ section{
     padding-bottom: 1.5rem;
     border-radius: 30px;
 }
+.col-flexed{
+    display: flex;
+    justify-content: center;
+}
+.planning-2 p{
+    padding-bottom: 2rem;
+}
 .planning-2 button{
-    background-color: #9792e4;
+    background-color: var(--color-second-primary);
     border: 0;
     border-radius: 50%;
     height: 30px;
     width: 30px;
 }
 .testimonials{
-    background-color: #9792e4;
-    flex-direction: row;
+    width: min-content;
+    border-radius: var(--dimensione-border-radius);
+    background-color: var(--color-second-primary);
+    align-items: center;
 }
 .container-card img{
     width: auto;
     height: 100%;
-    margin-left: -80px;
+    margin-left: -60px;
     border-radius: 50%;
 }
 .container-card{
@@ -195,11 +226,23 @@ section{
     gap: 1rem;
 }
 .testimonial h2{
-    color: #9792e4;
+    color: var(--color-second-primary);
     
 }
 .col-testimonial{
-    flex-basis: calc((100% / 3));
+    padding-left: .5rem;
+    padding-right: .5rem;
+    flex-basis: calc((100% / 4));
+    color: white;
+}
+.col-testimonial p{
+    font-size: 1.2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.col-testimonial i{
+    color: white;
+    font-size: 1.4rem;
 }
 
 .row.row-benefit{
@@ -219,10 +262,10 @@ section{
 .card-benefit h3,h4{
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    color: #9792e4;
+    color: var(--color-second-primary);
 }
 .btn-viola{
-    background-color: #9792e4;
+    background-color: var(--color-second-primary);
     color: white;
     border: 0;
     border-radius: 15px;
@@ -232,7 +275,7 @@ section{
     padding-top: 1rem;
     padding-left: 1.5rem;
     background-color: white;
-    border-radius: 25px;
+    border-radius: var(--dimensione-border-radius);
 }
 .card-benefit p{
     padding-top: 0.7rem;
@@ -241,11 +284,11 @@ section{
 .card-benefit .btn-viola{
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    padding-left: 0.8rem;
-    padding-right: 0.8rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 }
 .colored-2{
-    background-color: #9792e4;
+    background-color: var(--color-second-primary);
 }
 /* Sezione About Us */
 .container-About-us >.row{
@@ -253,7 +296,7 @@ section{
 }
 .card-aubout-us h2{
     font-size: 3rem;
-    color: #9792e4;
+    color: var(--color-second-primary);
 }
 .card-aubout-us p{
     padding-top: 1rem;
@@ -261,18 +304,47 @@ section{
 }
 .card-abouts-immg{
     display: flex;
+    position: relative;
     row-gap: 2rem;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     padding-left: 25%;
     padding-right: 25%;
 }
 .card-abouts-immg img{ 
     align-self: flex-start;
-    height: 100px;
+    height: 135px;
     border-radius: 50%;
 }
-/* About us testimonials con immagine */
+.card-abouts-immg .virgolette{
+    font-size: 3rem;
+    color: var(--color-second-primary);
+    position: absolute;
+    top: -10px;
+    right: 235px;
+}
+
+/* inizio ultima sezione */
+.col-final-about h4{
+    color: #d5d4f4;
+    font-size: 1rem;
+}
+.col-final-about h3{
+    color: white;
+    font-size: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+.col-final-about h2{
+    font-size: 4rem;
+    color: #fdc15f;
+}
+.col-final-about p{
+    color: white;
+}
+.nav-about a{
+    color: white;
+}
 
 @media screen and (min-width: 768px){
     .container{
@@ -303,6 +375,17 @@ section{
     .container-About-us .col-media{
         flex-basis: calc((100% / 3) - 15px);
     }
+    .card-abouts-immg .virgolette{
+        right: 110px;
+    }
+    .col-flexed{
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    .testimonials{
+        width: 100%;
+        flex-direction: row;
+    }
 
 }   
 @media screen and (min-width: 992px){ 
@@ -312,7 +395,10 @@ section{
     .nav-menu{
         display: flex;
     }
-    nav .icone{
+    .nav-menu a{
+        color: white;
+    }
+    nav .icona{
         display: none ;
     }
     .nav-btn{
