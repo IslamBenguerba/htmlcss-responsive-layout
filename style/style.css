@@ -4,6 +4,7 @@
     --color-second-primary: #9792e4;
     --sizie-icona-3-bars: 2rem;
     --dimensione-border-radius: 20px;
+    --normal-spacing: 1rem;
 }
 *{
     margin: 0;
@@ -14,8 +15,8 @@ body{
     font-family: 'Roboto',sans-serif;
 }
 header{
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: var(--normal-spacing);
+    padding-bottom: var(--normal-spacing);
     padding-right: .5rem;
     padding-left: 0.5rem;
     width: 100%;
@@ -96,6 +97,8 @@ section{
     display: flex;
 }
 .row-about .nav-btn{
+    margin-top: var(--normal-spacing);
+    margin-bottom: var(--normal-spacing);
     display: inline-block;
     padding: 0.9rem 5rem .9rem 5rem;
     border-radius: 30px;
@@ -130,17 +133,17 @@ section{
 .card{
     display: flex;
     flex-direction: column;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: var(--normal-spacing);
+    padding-right: var(--normal-spacing);
     padding-top: 2rem;
     height: 100%;
     background-color: var(--color-first-secondary);
     
 }
 .card-small{
-    padding-top: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-top: var(--normal-spacing);
+    padding-left: var(--normal-spacing);
+    padding-right: var(--normal-spacing);
     padding-bottom: 2rem;
     background-color: var(--color-first-secondary);
     height: 100%;
@@ -175,7 +178,7 @@ section{
     color: white;
 }
 .planning h2{
-    padding-top: 1rem;
+    padding-top: var(--normal-spacing);
 }
 .planning-2{
     background-color: white;
@@ -202,18 +205,29 @@ section{
     background-color: var(--color-second-primary);
     align-items: center;
 }
-.container-card img{
+/* .container-card img{
     width: auto;
     height: 100%;
     margin-left: -60px;
     border-radius: 50%;
-}
+} */
 .container-card{
     border: 1px solid;
     width: 200px;
     height: 200px;
     overflow: hidden;
     border-radius: 50%;
+    background-size: cover;
+    background-position:center ;
+}
+.primo{
+    background-image: url(/img/testimonial1.jpg);
+}
+.secondo{
+    background-image: url(/img/testimonial2.jpg);
+}
+.terzo{
+    background-image: url(/img/testimonial3.jpg);
 }
 /* @media screen and (min-width: 576px){
     .container-m{
@@ -234,7 +248,7 @@ section{
 .testimonial{
     background-color: white;
     border-radius: 0;
-    gap: 1rem;
+    gap: var(--normal-spacing);
 }
 .testimonial h2{
     color: var(--color-second-primary);
@@ -248,8 +262,8 @@ section{
 }
 .col-testimonial p{
     font-size: 1.2rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: var(--normal-spacing);
+    padding-bottom: var(--normal-spacing);
 }
 .col-testimonial i{
     color: white;
@@ -310,8 +324,8 @@ section{
     color: var(--color-second-primary);
 }
 .card-aubout-us p{
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: var(--normal-spacing);
+    padding-bottom: var(--normal-spacing);
 }
 /* serve solo per avere il layout  */
 .card-abouts-immg{ 
@@ -422,8 +436,8 @@ section{
     }
     .container{
         border:2px dashed #9792e4;
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding-left: var(--normal-spacing);
+        padding-right: var(--normal-spacing);
         max-width: 950px;
     }
     .col-sm{
